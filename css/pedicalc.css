@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #0d0736;
+}
+
+nav .active {
+    color: #f57c00 !important;
+}
+
+main {
+    padding-top: 5.5rem;
+    height: 5000px;
+}
