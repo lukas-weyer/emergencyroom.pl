@@ -75,8 +75,8 @@
                         <div class="card-body">
                             <h6 class="card-title mb-2 text-muted">Kalkulator pediatryczny</h6>
                             <div class="md-form mt-5">
-                                <input type="text" id="form1" class="form-control">
-                                <label for="form1" class="">Podaj wiek dziecka</label>
+                                <input type="number" autofocus id="childAge" min="1" max="12" class="form-control">
+                                <label for="childAge" class="">Podaj wiek dziecka</label>
                             </div>
                         </div>
                     </div>
@@ -84,8 +84,8 @@
                 <div class="col-md-8 mb-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Parametry życiowe</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">powyżej 12 r.ż jak u doroslych</h6>
+                                <h4 class="card-title">Parametry</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">powyżej 12 r.ż jak u dorosłych</h6>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -97,20 +97,38 @@
                                     </thead>    
                                     <tbody>
                                           <tr>
-                                            <th scope="row">Ilość oddechów</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td></td>
+                                            <th scope="row">Waga</th>
+                                            <td id="weight-score"></td>
                                             <td></td>
                                             <td></td>
                                           </tr>
                                           <tr>
-                                            <th scope="row">3</th>
+                                            <th scope="row">Rozmiar rurki int. z mankietem</th>
+                                            <td id="tube-size-cuff"></td>
                                             <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Rozmiar rurki int. bez mankietu</th>
+                                            <td id="tube-size-nocuff"></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Głebokość wprowadzenia rurki intubacyjnej przez usta</th>
+                                            <td id="tube-depth-mouth"></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Głebokość wprowadzenia rurki intubacyjnej przez nos</th>
+                                            <td id="tube-depth-nose"></td>
+                                            <td></td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Energia defibrylacji</th>
+                                            <td id="def-energy"></td>
                                             <td></td>
                                             <td></td>
                                           </tr>
@@ -118,6 +136,88 @@
                                       </table>
                             </div>
                         </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Farmakologia</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">powyżej 12 r.ż jak u doroslych</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Lek</th>
+                                        <th scope="col">Dawka</th>
+                                        <th scope="col">Dawka na kg m.c.</th>
+                                        <th scope="col">Info</th>
+                                    </tr>
+                                </thead>    
+                                <tbody>
+                                      <tr>
+                                        <th scope="row">Adrenalina</th>
+                                        <td id="td-epinefrine"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Amiodaron</th>
+                                        <td id="td-amiodarone"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Atropina</th>
+                                        <td id="td-atropine"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Clemastinum</th>
+                                        <td id="td-clemastinum"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Clonazepam</th>
+                                        <td id="td-clonazepam"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Furosemid</th>
+                                        <td id="td-furosemidum"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Glucagon</th>
+                                        <td id="td-glucagon"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Hydrocortisonum</th>
+                                        <td id="td-hydrocoritosonum"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Morfina</th>
+                                        <td id="td-morphine"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Diazepam</th>
+                                        <td id="td-diazepam"></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
