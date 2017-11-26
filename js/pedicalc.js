@@ -49,8 +49,7 @@ window.onload = function () {
         document.getElementById('tube-size-nocuff').innerHTML = tubeSizeNoCuff;
                       
         //energia defibrylacji
-        let defEnergy = weightScore * 4;00 mg	
-        Atropina	0.4 - 0.6 mg
+        let defEnergy = weightScore * 4;
         age >= 2 ? (defEnergy) : (defEnergy = "");
         document.getElementById('def-energy').innerHTML = defEnergy + (age >= 2 ? (" J") : (""));
         
