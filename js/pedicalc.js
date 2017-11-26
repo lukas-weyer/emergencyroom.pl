@@ -49,7 +49,8 @@ window.onload = function () {
         document.getElementById('tube-size-nocuff').innerHTML = tubeSizeNoCuff;
                       
         //energia defibrylacji
-        let defEnergy = weightScore * 4;
+        let defEnergy = weightScore * 4;00 mg	
+        Atropina	0.4 - 0.6 mg
         age >= 2 ? (defEnergy) : (defEnergy = "");
         document.getElementById('def-energy').innerHTML = defEnergy + (age >= 2 ? (" J") : (""));
         
@@ -65,13 +66,13 @@ window.onload = function () {
         document.getElementById('td-amiodarone').innerHTML = amiodarone + (age >= 2 ? (" mg") : (""));
         
         let atropine = [0.02, 0.03].map(
-            dose => dose * weightScore
+            dose => Math.round((dose * weightScore)*100) /100
         );
         age >= 2 ? (atropine) : (atropine = "");
         document.getElementById('td-atropine').innerHTML = (age >= 2 ? (atropine[0] + " - " + atropine[1] + " mg") : (""));
 
         let clemastinum = [0.025 , 0.05].map(
-            dose => dose * weightScore
+            dose => Math.round((dose * weightScore)*1000) /1000
         );
         age >= 3 ? (clemastinum) : (clemastinum = "");
         document.getElementById('td-clemastinum').innerHTML = (age >= 3 ? (clemastinum[0] + " - " + clemastinum[1] + " mg") : ("Lek stosuje się powyżej 3go roku życia"));
@@ -94,38 +95,17 @@ window.onload = function () {
         document.getElementById('td-hydrocoritosonum').innerHTML = hydrocortisonum + (age >= 2 ? (" mg") : (""));
         
         let morphine = [0.1 , 0.2].map(
-            dose => dose * weightScore
+            dose => Math.round((dose * weightScore)*10) /10
         );
         age >= 2 ? (morphine) : (morphine = "");
         document.getElementById('td-morphine').innerHTML = (age >= 2 ? (morphine[0] + " - " + morphine[1] + " mg") : (""));
 
         let diazepam = [0.2, 0.3].map(
-            dose => Math.round((dose * weightScore)*10) /10
+            dose => Math.round((dose * weightScore)*10) /10 
         );
         age >= 2 ? (diazepam) : (diazepam = "");
         document.getElementById('td-diazepam').innerHTML = (age >= 2 ? (diazepam[0] + " - " + diazepam[1] + " mg") : (""));
 
-        //dodawanie do tabelek
-
-
-        //test
-        console.log(`Wiek dziecka to ${age}`);
-        console.log(`Waga dziecka to : ${weightScore} kg`);
-        console.log(`Rozmiar rurki intubacyjnej z mankietem: ${tubeSizeWithCuff}`);
-        console.log(`Rozmiar rurki intubacyjnej bez mankietu: ${tubeSizeNoCuff}`);
-        console.log(`Głębokość wprowadzenia rurki intubacyjnej przez usta: ${tubeDepthMouth} cm`);
-        console.log(`Głębokość wprowadzenia rurki intubacyjnej przez nos: ${tubeDepthNose} cm`);
-        console.log(`Energia defibrylacji wynosi: ${defEnergy} J`);
-        console.log(`Adrenalina: ${epinefrine} mg`);
-        console.log(`Amiodaron: ${amiodarone} mg`);
-        console.log(`Atropina: ${atropine} mg (minimalna dawka to 0.1 mg`);
-        console.log(`Clemastinum: ${clemastinum}`);
-        console.log(`Clonazepam: ${clonazepam} mg`);
-        console.log(`Furosemid: ${furosemidum[0]} - ${furosemidum[1]} mg`);
-        console.log(`Glucagon: ${glucagon} mg`);
-        console.log(`Hydrocortizon: ${hydrocortizon} mg`);
-        console.log(`Morfina: ${morphine[0]} - ${morphine[1]} mg`);
-        console.log(`Relanium: ${diazepam[0]} - ${diazepam[1]} mg`);
     }
 };
 

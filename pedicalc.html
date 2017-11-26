@@ -17,7 +17,40 @@
 </head>
     
 <body class=" indigo lighten-5">
+    <!-- Button trigger modal -->
+    
 
+    <!-- Modals -->
+    <div class="modal fade" id="epinefrineModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Adrenalina</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><b>NZK:</b><br> 0,01 mg / kg m.c.</li>
+                        <li class="list-group-item"><b>Wstrząs anafilaktyczny:</b>
+                            <ul>
+                                <li>dzieci < 6 r.ż.: 150 μg im</li>
+                                <li>dzieci 6-12 r.ż.: 300 μg im</li>
+                                <li>powyżej 12 r.ż.: 0,5 mg im</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item"><b>Napad astmy oskrzelowej:</b><br>
+                            10 μg/kg m.c. im lub s.c. (maks. dawka jednorazowa: 0,5 mg), dawkę można powtórzyć dwukrotnie w 20-minutowych odstępach, a następnie w razie potrzeby co 4 godziny
+                        </li>
+                        <li class="list-group-item"><b>Wstrząs kardiogenny:</b><br> 0,1-1 μg/kg m.c./min we wlewie dożylnym</li>
+                        <li class="list-group-item"><b>Ciężka bradykardia:</b><br> 0,1-1 μg/kg m.c./min we wlewie dożylnym lub w pompie infuzyjnej</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
     <header>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="mainNav">
@@ -149,7 +182,6 @@
                                     <tr>
                                         <th scope="col">Lek</th>
                                         <th scope="col">Dawka</th>
-                                        <th scope="col">Dawka na kg m.c.</th>
                                         <th scope="col">Info</th>
                                     </tr>
                                 </thead>    
@@ -157,61 +189,53 @@
                                       <tr>
                                         <th scope="row">Adrenalina</th>
                                         <td id="td-epinefrine"></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#epinefrineModal">
+                                            <i class="fa fa-question" aria-hidden="true"></i>
+                                        </button></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Amiodaron</th>
                                         <td id="td-amiodarone"></td>
-                                        <td></td>
                                         <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Atropina</th>
                                         <td id="td-atropine"></td>
                                         <td></td>
-                                        <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Clemastinum</th>
                                         <td id="td-clemastinum"></td>
-                                        <td></td>
                                         <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Clonazepam</th>
                                         <td id="td-clonazepam"></td>
                                         <td></td>
-                                        <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Furosemid</th>
                                         <td id="td-furosemidum"></td>
-                                        <td></td>
                                         <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Glucagon</th>
                                         <td id="td-glucagon"></td>
                                         <td></td>
-                                        <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Hydrocortisonum</th>
                                         <td id="td-hydrocoritosonum"></td>
-                                        <td></td>
                                         <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Morfina</th>
                                         <td id="td-morphine"></td>
                                         <td></td>
-                                        <td></td>
                                       </tr>
                                       <tr>
                                         <th scope="row">Diazepam</th>
                                         <td id="td-diazepam"></td>
-                                        <td></td>
                                         <td></td>
                                       </tr>
                                 </tbody>
