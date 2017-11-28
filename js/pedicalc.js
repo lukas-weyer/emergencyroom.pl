@@ -56,9 +56,9 @@ window.onload = function () {
 
         //Medicaments
 
-        let epinefrine = weightScore * 0.01;
-        age >= 2 ? (epinefrine) : (epinefrine = "");
-        document.getElementById('td-epinefrine').innerHTML = epinefrine + (age >= 2 ? (" mg") : (""));
+        let epinephrine = weightScore * 0.01;
+        age >= 2 ? (epinephrine) : (epinephrine = "");
+        document.getElementById('td-epinephrine').innerHTML = epinephrine + (age >= 2 ? (" mg") : (""));
         
         let amiodarone = weightScore * 5;
         age >= 2 ? (amiodarone) : (amiodarone = "");
