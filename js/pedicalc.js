@@ -89,7 +89,7 @@ window.onload = function () {
         weightScore < 25 ? (glucagon = 0.5) : (glucagon = 1);
         document.getElementById('td-glucagon').innerHTML = (age >= 2 ? (glucagon + " mg") : ("0.5 mg"));        
 
-        let hydrocortisonum = 0.5 * weightScore;
+        let hydrocortisonum = 5 * weightScore;
         age >= 2 ? (hydrocortisonum) : (hydrocortisonum = "");
         document.getElementById('td-hydrocoritosonum').innerHTML = hydrocortisonum + (age >= 2 ? (" mg") : (""));
         

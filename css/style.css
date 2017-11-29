@@ -40,3 +40,14 @@ header,
 nav .active {
     color: #f57c00 !important;
 }
+
+.footer-contact {
+    padding: 20px;
+}
+
+.hover-social-list a:hover {
+    color: #f57c00;
+}
+.modal-header-bg {
+    background-color: #0d0736;
+}

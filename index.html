@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="utf-8">
@@ -16,8 +16,45 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
     
-<body>
-
+<body class="indigo lighten-5">
+<!--Modal: Subscription From-->
+    <div class="modal fade" id="modalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+    
+                <!--Header-->
+                <div class="modal-header modal-header-bg white-text">
+                    <h4 class="title text-left"><i class="fa fa-newspaper-o"></i>Newsletter</h4>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body mb-0">
+    
+                    <div class="md-form form-sm">
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" id="form27" class="form-control">
+                        <label for="form27">Imię</label>
+                    </div>
+    
+                    <div class="md-form form-sm">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="email" id="form28" class="form-control">
+                        <label for="form28">Twój e-mail</label>
+                    </div>
+    
+                    <div class="text-center mt-1-half">
+                        <button class="btn btn-email btn-outline-deep-orange mb-1 waves-effect waves-light">OK<i class="fa fa-check ml-1"></i></button>
+                    </div>
+    
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: Subscription From-->
     <header>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="mainNav">
@@ -45,7 +82,7 @@
 						</li>
 						<li class="nav-item">
 								<a class="nav-link waves-effect waves-light js-scroll-trigger" href="#contact">Kontakt</a>
-							</li>
+						</li>
             
                     </ul>
                     <!-- Links -->
@@ -55,12 +92,12 @@
                                 <a href="https://www.facebook.com/weyEmergencyRoom/" target="_newblank" class="nav-link waves-effect waves-light"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="nav-link waves-effect waves-light"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li class="nav-item">
                                 <a href="https://www.instagram.com/emergencyroom.pl/" target="_newblank" class="nav-link waves-effect waves-light"><i class="fa fa-instagram"></i></a>
                             </li>
-                        </ul>
+                    </ul>
                     
                 </div>
                 <!-- Collapsible content -->
@@ -75,8 +112,8 @@
                             <h1 class="h1-responsive font-bold deep-orange-text mb-2">Emergency Room</h1>
                             <hr class="hr-light">
                             <p class="lead text-white">Portal dla ludzi których pasją jest ratowanie życia.
-                                    Dołącz do nas, bądź na bieżąco i zapisz się na newsletter</p>
-                            <button type="button "class="btn btn-lg btn-email btn-outline-deep-orange"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>Zapisz się!</button>
+                                    Dołącz do nas, bądź na bieżąco i zapisz się do newslettera</p>
+                            <button type="button "class="btn btn-lg btn-email btn-outline-deep-orange" data-toggle="modal" data-target="#modalSubscription"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>Zapisz się!</button>
                     </div>
                 </div>
             </div>
@@ -88,9 +125,8 @@
                 <h2 class="mb-4 font-weight-bold">Mój cel</h2>
                 <div class="row d-flex justify-content-center my-5">
                     <div class="col-md-6">
-                        <p class="lead grey-text text-md-left">
+                        <p class="lead">
                             Chciałbym zbudować miejsce skupiające spoleczność silnie związaną z szeroko pojętą medycyną ratunkową - <b>ratowników medycznych, pilęgniarki/arzy, lekarzy systemu oraz studentów</b> - społeczność pasjonatów dzielących się wiedzą, wspierających mniej doświadczonych członków grupy. <br>
-                        
                             W niedalekiej przyszłości znajdziesz tu przestrzeń pełną wartościowej treści. Poniżej przedstawiłem Tobie kilka z pośród wielu pomysłów których ralizację postawiłem sobie za cel.
                         </p>
                     </div>
@@ -113,8 +149,8 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-5">
-                            <i class="fa fa-shopping-cart fa-5x deep-orange-text" aria-hidden="true"></i>
-                            <h4 class="my-4">Sklep</h4>
+                            <i class="fa fa-mobile-phone fa-5x deep-orange-text" aria-hidden="true"></i>
+                            <h4 class="my-4">Aplikacje</h4>
                         </div>
                         <div class="col-md-6 mb-5">
                             <i class="fa fa-group fa-5x deep-orange-text" aria-hidden="true"></i>
@@ -135,53 +171,66 @@
                 </div>
             </div>
         </div>
-        
+        <!-- about -->
         <div class="container">
-        
             <section id="about">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                                    
-                                        <!--Card image-->
-                                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap">
-                                    
-                                        <!--Card content-->
-                                        <div class="card-body">
-                                            <!--Title-->
-                                            <h4 class="card-title">Card title</h4>
-                                            <!--Text-->
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Button</a>
-                                        </div>
-                                    
-                                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid z-depth-1-half rounded-circle my-4" src="img/IMG_20171127_182150_363.jpg" alt="">
+                        <h3 class="text-center">Łukasz Weyer</h3>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-8">
+                        <p class="grey-text"></p>
+                    </div>
                 </div>
             </section>
         </div>
         
         
     </main>
+
 	<!--Footer-->
 	<div class="container-fluid text-center text-white grey darken-4">
-		Chcesz być na bierząco? Zapisz się do newslettera<button type="button "class="btn btn-sm btn-email btn-outline-deep-orange wow bounceInRight" data-wow-delay="0.4s"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>Zapisz się!</button>
+		<div class="row">
+            <div class="col">Chcesz być na bierząco? Zapisz się do newslettera<button type="button "class="btn btn-sm btn-email btn-outline-deep-orange wow bounceInRight" data-wow-delay="0.4s" data-toggle="modal" data-target="#modalSubscription"><i class="fa fa-envelope pr-2" aria-hidden="true"></i>Zapisz się!</button>
+            </div>
+        </div>
 	</div>
     <footer id="contact" class="page-footer unique-color-dark center-on-small-only mt-0">
     <!--Footer Links-->
     	<div class="container">
-			<div class="row text-center">
-				<div class="col-md-3">
-					<i class="fa fa-mobile-phone fa-lg" aria-hidden="true"></i>
+			<div class="row text-center footer-contact">
+				<div class="col-lg-4 my-4">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <hr class="hr-light">
 					<h6>+48 697 610 100</h6>
 				</div>
-				<div class="col-md-3">
-					<i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
-					<h6>wey.emergencyroom@gmail.com</h6>
+				<div class="col-lg-4 my-4 hover-social-list">
+                    <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
+                    <hr class="hr-light">
+					<a href="mailto:wey.emergencyroom@gmail.com">wey.emergencyroom@gmail.com</a>
 				</div>
-				<div class="col-md-3"></div>
-				<div class="col-md-3"></div>
+				<div class="col-lg-4 my-4">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <hr class="hr-light">
+                    <h6>Grupy na facebooku:</h6>
+                    <ul class="hover-social-list">
+                        <li><a href="https://www.facebook.com/groups/286698605176773/">Emergency Room</a></li>
+                        <li><a href="https://www.facebook.com/groups/125493431496036/">Ratownictwo Medyczne - wsparcie na starcie</a></li>
+                    </ul>
+                    <hr class="hr-light">
+                    <ul class="hover-social-list">
+                        <li class="d-inline-block">
+                            <a href="https://www.facebook.com/weyEmergencyRoom/" target="_newblank" class="nav-link waves-effect waves-light"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="d-inline-block">
+                            <a href="#" class="nav-link waves-effect waves-light"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="d-inline-block">
+                            <a href="https://www.instagram.com/emergencyroom.pl/" target="_newblank" class="nav-link waves-effect waves-light"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
 			</div>
     	</div>
     <!--/.Footer Links-->
