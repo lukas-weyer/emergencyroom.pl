@@ -9,3 +9,8 @@ nav .active {
 main {
     padding-top: 5rem;
 }
+
+.table button {
+    width: 120px;
+    padding: 5px 0 !important;
+}
